@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JBJ JAY BAGESHWORI INSTITUTE - Computer & Language Training Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .course-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .software-badge {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+        .language-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        .design-badge {
+            background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+        .hardware-badge {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-laptop-code text-blue-600 text-2xl mr-2"></i>
+                <div>
+                    <h1 class="text-xl font-bold text-gray-800">JBJ JAY BAGESHWORI INSTITUTE</h1>
+                    <p class="text-xs text-gray-600">Computer & Language Training Center</p>
+                </div>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Desktop menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
+                <a href="#courses" class="text-gray-700 hover:text-blue-600 font-medium">Courses</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-600 font-medium">Testimonials</a>
+                <a href="#software" class="text-gray-700 hover:text-blue-600 font-medium">Software</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-600">Home</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-600">About Us</a>
+            <a href="#courses" class="block py-2 text-gray-700 hover:text-blue-600">Courses</a>
+            <a href="#testimonials" class="block py-2 text-gray-700 hover:text-blue-600">Testimonials</a>
+            <a href="#software" class="block py-2 text-gray-700 hover:text-blue-600">Software</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-600">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-16 md:py-24">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Professional Computer & Language Training</h1>
+                <p class="text-xl mb-8 opacity-90">Get job-ready with our comprehensive courses in accounting, design, languages, and more. Join hundreds of successful students today!</p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#courses" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition">View Courses</a>
+                    <a href="#contact" class="bg-transparent border-2 border-white text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-white hover:bg-opacity-10 transition">Contact Us</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="bg-white bg-opacity-20 rounded-2xl p-6 backdrop-blur-sm max-w-md">
+                        <div class="text-center mb-6">
+                            <i class="fas fa-quote-left text-3xl text-white opacity-50"></i>
+                        </div>
+                        <p class="text-lg italic text-center mb-6">"This institute helped me secure a job as an accountant just 2 months after completing the course. The practical training was exceptional!"</p>
+                        <div class="flex items-center justify-center">
+                            <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-user text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold">Ramesh Sharma</p>
+                                <p class="text-sm opacity-80">Accountant at Swastik Traders</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Success in Numbers</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Stat 1 -->
+                <div class="course-card bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center shadow-lg">
+                    <div class="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-award text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-5xl font-bold text-blue-600 mb-2">100%</h3>
+                    <p class="text-xl font-semibold text-gray-800 mb-2">Job Guarantee</p>
+                    <p class="text-gray-600">We guarantee job placement for all our graduates within 6 months of course completion.</p>
+                </div>
+                
+                <!-- Stat 2 -->
+                <div class="course-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 text-center shadow-lg">
+                    <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-user-graduate text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-5xl font-bold text-green-600 mb-2">1000+</h3>
+                    <p class="text-xl font-semibold text-gray-800 mb-2">Students Trained</p>
+                    <p class="text-gray-600">Over 1000 students have successfully completed our career-focused training programs.</p>
+                </div>
+                
+                <!-- Stat 3 -->
+                <div class="course-card bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 text-center shadow-lg">
+                    <div class="w-20 h-20 mx-auto bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-briefcase text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-5xl font-bold text-purple-600 mb-2">1000+</h3>
+                    <p class="text-xl font-semibold text-gray-800 mb-2">Job Placements</p>
+                    <p class="text-gray-600">More than 1000 students have been placed in top companies through our placement program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">About JBJ JAY BAGESHWORI INSTITUTE</h2>
+                    <p class="text-gray-600 mb-4">Established with a vision to provide quality education and job-oriented training, JBJ JAY BAGESHWORI INSTITUTE has been a trusted name in computer and language education for over a decade.</p>
+                    <p class="text-gray-600 mb-4">We are committed to empowering students with practical skills that directly translate to career success. Our institute is located at the heart of Nepalgunj, making quality education accessible to everyone in the region.</p>
+                    <p class="text-gray-600 mb-6">Our experienced faculty, state-of-the-art facilities, and industry-relevant curriculum ensure that our students are well-prepared to meet the demands of today's competitive job market.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Experienced Faculty</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Practical Training</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Job Placement Assistance</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Modern Infrastructure</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Flexible Timings</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Affordable Fees</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg max-w-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Why Choose Us?</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-graduation-cap text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Expert Faculty</h4>
+                                    <p class="text-gray-600">Our instructors are industry professionals with years of practical experience.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-laptop-code text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Hands-on Training</h4>
+                                    <p class="text-gray-600">We focus on practical skills with real-world projects and assignments.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-briefcase text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Job Placement</h4>
+                                    <p class="text-gray-600">Our dedicated placement cell helps students secure employment after course completion.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-certificate text-yellow-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 mb-1">Recognized Certification</h4>
+                                    <p class="text-gray-600">Our certificates are widely recognized by employers across various industries.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">Our Comprehensive Courses</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">We offer a wide range of courses to help you build a successful career in accounting, design, languages, and technology.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Accounting Courses -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="software-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Accounting
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Job Oriented Accountant</h3>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Swastik Software</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Busy Software</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Tally Software</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Manual Account -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="software-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Accounting
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Manual Account</h3>
+                    <p class="text-gray-600 mb-4">Learn traditional accounting methods and principles for comprehensive financial understanding.</p>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Computer Course -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="hardware-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Technology
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Computer Course</h3>
+                    <p class="text-gray-600 mb-4">Basic to advanced computer skills including MS Office, typing, and computer fundamentals.</p>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- TDS Calculation -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="software-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Accounting
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">TDS Calculation</h3>
+                    <p class="text-gray-600 mb-4">Master Tax Deducted at Source calculations, filing, and compliance procedures.</p>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- VAT Tax Training -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="software-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Accounting
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">VAT Tax Training & Auditing</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive VAT training including tax calculation, filing, and auditing procedures.</p>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Banking Course -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="software-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Finance
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Banking Course</h3>
+                    <p class="text-gray-600 mb-4">Prepare for banking careers with courses on banking operations, finance, and customer service.</p>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Language Courses -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="language-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Language
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Foreign Languages</h3>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-globe-asia text-blue-500 mt-1 mr-2"></i>
+                            <span>Japanese Language</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe-asia text-blue-500 mt-1 mr-2"></i>
+                            <span>Korean Language</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-globe-americas text-blue-500 mt-1 mr-2"></i>
+                            <span>English Language</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Design Courses -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="design-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Design
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Graphic Design</h3>
+                    <p class="text-gray-600 mb-4">Learn professional graphic design skills for creating visual content for print and digital media.</p>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- AutoCAD Course -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="design-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Design
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">AutoCAD 2D & 3D</h3>
+                    <p class="text-gray-600 mb-4">Master multi-drawing AutoCAD for 2D drafting and 3D modeling for engineering and architecture.</p>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Other Courses -->
+                <div class="course-card bg-white rounded-xl p-6 shadow-md">
+                    <div class="hardware-badge text-white text-xs font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                        Technology
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Other Courses</h3>
+                    <ul class="space-y-2 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-book text-purple-500 mt-1 mr-2"></i>
+                            <span>Bridge Course</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-chalkboard-teacher text-purple-500 mt-1 mr-2"></i>
+                            <span>Tuition Class</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-wifi text-purple-500 mt-1 mr-2"></i>
+                            <span>Internet/E-mail</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-tools text-purple-500 mt-1 mr-2"></i>
+                            <span>Computer Hardware</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 flex items-center">
+                        Enroll Now <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">What Our Students Say</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-12">Hear from our successful students who have transformed their careers through our training programs.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex flex-col items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                             alt="Sita K.C." class="testimonial-image rounded-full mb-4">
+                        <div class="text-center">
+                            <h4 class="font-semibold text-gray-800">Sita K.C.</h4>
+                            <p class="text-sm text-gray-600">Accounting Graduate</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic text-center">"The Tally and Busy software training at JBJ Institute helped me secure a job as an accountant at a reputed company. The practical approach and job placement assistance were invaluable."</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex flex-col items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                             alt="Rajesh Thapa" class="testimonial-image rounded-full mb-4">
+                        <div class="text-center">
+                            <h4 class="font-semibold text-gray-800">Rajesh Thapa</h4>
+                            <p class="text-sm text-gray-600">AutoCAD Professional</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic text-center">"The AutoCAD course provided me with industry-relevant skills. I now work as a draftsman at an architectural firm. The instructors were knowledgeable and supportive throughout the course."</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-white rounded-2xl p-6 shadow-lg">
+                    <div class="flex flex-col items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                             alt="Anita Shrestha" class="testimonial-image rounded-full mb-4">
+                        <div class="text-center">
+                            <h4 class="font-semibold text-gray-800">Anita Shrestha</h4>
+                            <p class="text-sm text-gray-600">Japanese Language Student</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-center text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 italic text-center">"The Japanese language course was comprehensive and well-structured. The teachers were native speakers, and the small class sizes allowed for personalized attention. I'm now preparing for the JLPT exam."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Section -->
+    <section id="software" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Professional Accounting Software</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tally -->
+                <div class="course-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 text-center">
+                    <div class="w-20 h-20 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-calculator text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-600 mb-4">Tally Software</h3>
+                    <p class="text-gray-600 mb-6">Comprehensive accounting, inventory, and business management software used by businesses worldwide.</p>
+                    <div class="bg-blue-100 text-blue-800 font-semibold py-2 px-4 rounded-lg inline-block">
+                        Most Popular
+                    </div>
+                </div>
+                
+                <!-- Busy -->
+                <div class="course-card bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 text-center">
+                    <div class="w-20 h-20 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-bar text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-green-600 mb-4">Busy Software</h3>
+                    <p class="text-gray-600 mb-6">Advanced accounting software with inventory management, GST compliance, and multi-location support.</p>
+                    <div class="bg-green-100 text-green-800 font-semibold py-2 px-4 rounded-lg inline-block">
+                        Industry Standard
+                    </div>
+                </div>
+                
+                <!-- Swastik -->
+                <div class="course-card bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 text-center">
+                    <div class="w-20 h-20 mx-auto bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-file-invoice-dollar text-purple-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-purple-600 mb-4">Swastik Software</h3>
+                    <p class="text-gray-600 mb-6">User-friendly accounting solution designed for small to medium businesses with comprehensive features.</p>
+                    <div class="bg-purple-100 text-purple-800 font-semibold py-2 px-4 rounded-lg inline-block">
+                        Easy to Use
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4">Contact Us</h2>
+            <p class="text-center text-gray-300 max-w-2xl mx-auto mb-12">Get in touch with us to learn more about our courses or to enroll in any program.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">JBJ JAY BAGESHWORI INSTITUTE</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <p class="font-medium">Address</p>
+                                <p class="text-gray-300">B.P. Chowk, Nepalgunj, Banke, Nepal</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <p class="font-medium">Phone Numbers</p>
+                                <p class="text-gray-300">9849312114, 9814590827</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-400 mt-1 mr-4"></i>
+                            <div>
+                                <p class="font-medium">Opening Hours</p>
+                                <p class="text-gray-300">Sunday - Friday: 7:00 AM - 7:00 PM</p>
+                                <p class="text-gray-300">Saturday: 9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-blue-400 rounded-full flex items-center justify-center hover:bg-blue-500 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-pink-600 rounded-full flex items-center justify-center hover:bg-pink-700 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <form id="contact-form" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-300 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-300 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                        </div>
+                        <div>
+                            <label for="course" class="block text-gray-300 mb-2">Course Interest</label>
+                            <select id="course" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                                <option value="">Select a course</option>
+                                <option value="accounting">Job Oriented Accountant</option>
+                                <option value="manual">Manual Account</option>
+                                <option value="computer">Computer Course</option>
+                                <option value="tds">TDS Calculation</option>
+                                <option value="vat">VAT Tax Training</option>
+                                <option value="banking">Banking Course</option>
+                                <option value="japanese">Japanese Language</option>
+                                <option value="korean">Korean Language</option>
+                                <option value="english">English Language</option>
+                                <option value="graphic">Graphic Design</option>
+                                <option value="autocad">AutoCAD 2D/3D</option>
+                                <option value="bridge">Bridge Course</option>
+                                <option value="tuition">Tuition Class</option>
+                                <option value="internet">Internet/E-mail</option>
+                                <option value="hardware">Computer Hardware</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-300 mb-2">Message (Optional)</label>
+                            <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-laptop-code text-blue-400 text-2xl mr-2"></i>
+                        <div>
+                            <h2 class="text-xl font-bold">JBJ JAY BAGESHWORI INSTITUTE</h2>
+                            <p class="text-sm text-gray-400">Computer & Language Training Center</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">Providing quality education and job-oriented training since 2010. Your success is our priority.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#courses" class="text-gray-400 hover:text-white transition">Courses</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Certifications</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-certificate text-blue-400 mr-2"></i>
+                            <span>Government Recognized</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-award text-blue-400 mr-2"></i>
+                            <span>Job Placement Guarantee</span>
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-user-graduate text-blue-400 mr-2"></i>
+                            <span>Industry Expert Trainers</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 JBJ JAY BAGESHWORI INSTITUTE. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

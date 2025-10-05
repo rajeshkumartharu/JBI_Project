@@ -1,0 +1,56 @@
+/* Base Colors for Computer Institution */
+:root {
+  --color-primary: #1D4ED8;       /* Blue */
+  --color-secondary: #2563EB;     /* Lighter Blue */
+  --color-accent: #F59E0B;        /* Orange */
+  --color-bg-light: #F3F4F6;      /* Light gray */
+  --color-bg-dark: #111827;       /* Dark gray */
+  --color-text-primary: #111827;  /* Dark text */
+  --color-text-secondary: #6B7280;/* Gray text */
+  --color-success: #10B981;       /* Green */
+}
+
+/* Apply Colors */
+body {
+  background-color: var(--color-bg-light);
+  color: var(--color-text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background-color: var(--color-bg-dark);
+  color: white;
+}
+
+a {
+  color: var(--color-primary);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--color-secondary);
+}
+
+button {
+  background-color: var(--color-primary);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: var(--color-secondary);
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
